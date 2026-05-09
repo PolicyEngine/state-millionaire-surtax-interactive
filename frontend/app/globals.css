@@ -1,6 +1,32 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@import "@policyengine/ui-kit/theme.css";
+
+@theme {
+  --font-sans: "Inter", "Roboto", "Public Sans", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "Menlo", monospace;
+
+  --color-primary-50: #e6fffa;
+  --color-primary-100: #b2f5ea;
+  --color-primary-200: #81e6d9;
+  --color-primary-300: #4fd1c5;
+  --color-primary-400: #38b2ac;
+  --color-primary-500: #319795;
+  --color-primary-600: #2c7a7b;
+  --color-primary-700: #285e61;
+  --color-primary-800: #234e52;
+  --color-primary-900: #1d4044;
+
+  --color-secondary-50: #f7fafc;
+  --color-secondary-100: #edf2f7;
+  --color-secondary-200: #e2e8f0;
+  --color-secondary-300: #cbd5e0;
+  --color-secondary-400: #a0aec0;
+  --color-secondary-500: #718096;
+  --color-secondary-600: #4a5568;
+  --color-secondary-700: #2d3748;
+  --color-secondary-800: #1a202c;
+  --color-secondary-900: #171923;
+}
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -18,7 +44,6 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-/* Scrollytelling animations */
 .scroll-section {
   opacity: 0;
   transform: translateY(20px);
@@ -30,7 +55,6 @@ body {
   transform: translateY(0);
 }
 
-/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -48,13 +72,12 @@ body {
   background: #2c7a7b;
 }
 
-/* Number input without spinner */
-input[type='number']::-webkit-inner-spin-button,
-input[type='number']::-webkit-outer-spin-button {
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-input[type='number'] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
